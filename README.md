@@ -27,6 +27,7 @@ You may use any pattern or library that you find suitable to accomplish this tas
 - Proper use of React APIs.
 - Clean, well-commented code. We prefer clarity over cleverness.
 
+
 ## React
 
 You may use whatever patterns and state management you prefer while working on this. The choice of libraries and state management patterns is not as important as a functioning project. 
@@ -39,6 +40,11 @@ You may use whatever patterns and state management you prefer while working on t
   - Could be a fixed position checkbox or overlay with options
 - Dynamic theming
 - Mobile breakpoints and responsive design
+
+## Expectations
+
+- We think the main task should take about 2 hours
+- Please keep a tidy commit history and separate out the commits for the main task and extra credit task
 
 ## Example API request
 
