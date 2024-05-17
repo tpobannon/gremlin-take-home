@@ -1,9 +1,9 @@
 import './App.css'
+import { SearchPage } from './search/SearchPage'
 
 function App() {
-
   return (
-    <div>Gremlin Take Home</div>
+    <SearchPage/>
   )
 }
 
