@@ -2,11 +2,15 @@ import { useState, ChangeEvent } from "react";
 import { SearchContext } from "./SearchContext"
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
+import { NpmPackageSearchResult } from "./types";
 import styles from "./SearchPage.module.scss";
 
+/**
+ * Main component for the package search page
+ */
 export const SearchPage = () => {
     const [searchText, setSearchText] = useState<string | undefined>(undefined);
-    const [searchResultData, setSearchResultData] = useState<any>(undefined);
+    const [searchResultData, setSearchResultData] = useState<NpmPackageSearchResult[]>([]);
     const [forceSearchError, setForceSearchError] = useState<boolean>(false);
 
     const handleSearchErrorChanged = (e: ChangeEvent<HTMLInputElement>) => {

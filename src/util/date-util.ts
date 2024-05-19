@@ -1,5 +1,9 @@
 import moment from "moment";
 
+/**
+ * Get a text description of how far in the past a date value is
+ * @param d The date value
+ */
 export const getHowFarInPast = (d: Date | string): string => {
     const now = moment()
     const dMoment = moment(d)

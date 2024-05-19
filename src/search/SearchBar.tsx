@@ -4,6 +4,9 @@ import styles from "./SearchBar.module.scss";
 import npmLogo from "../assets/npm-logo.svg"
 import magGlass from "../assets/mag-glass.svg"
 
+/**
+ * Component for the search bar portion of the module search page
+ */
 export const SearchBar = () => {
     const [searchText, setSearchText] = useState<string>("")
     const {setQueryString} = useContext(SearchContext);

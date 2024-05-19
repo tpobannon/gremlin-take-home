@@ -5,9 +5,13 @@ import { getHowFarInPast } from "../util/date-util"
 import styles from "./SearchResultListItem.module.scss"
 
 type SearchResultListItemProps = {
+    /** The search result item to be displayed by this component */
     item: NpmPackageSearchResult
 }
 
+/**
+ * Component for displaying a single package in the search results
+ */
 export const SearchResultListItem = ({item}: SearchResultListItemProps) => {
     
     const publishedTime = useMemo(() => {

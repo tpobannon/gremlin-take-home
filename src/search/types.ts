@@ -1,3 +1,4 @@
+/** A single item returned from the NPM package search API */
 export type NpmPackageSearchResult = {
     package: {
         name: string;

@@ -4,6 +4,9 @@ import { NpmPackageSearchResult } from "./types";
 const BASE_URL = "https://api.npms.io/v2/search/suggestions";
 const ERROR_URL = "https://api.nums.io/v99999";
 
+/**
+ * Hook for invoking the NPM search API
+ */
 export const useNpmSearch = (searchText: string | undefined, forceError: boolean = false): {isLoading: boolean, data: NpmPackageSearchResult[], error: string | undefined} => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] =  useState<string | undefined>(undefined);
@@ -30,7 +33,7 @@ export const useNpmSearch = (searchText: string | undefined, forceError: boolean
             .catch(err => setError(err.toString()))
             .finally(() => setIsLoading(false))
 
-    }, [searchText])
+    }, [searchText, forceError])
 
     return {isLoading, data, error}
 }
