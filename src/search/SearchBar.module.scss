@@ -9,6 +9,12 @@ $search-background-color: rgb(242,242,242);
 .npmLogo {
     height: 20px;
     margin-right: 20px;
+
+    @media(max-width: 600px) {
+        & {
+            display: none;
+        }
+    }
 }
 
 .searchField {
@@ -20,6 +26,12 @@ $search-background-color: rgb(242,242,242);
 .magGlass {
     margin-left: 10px;
     margin-right: 10px;
+
+    @media(max-width: 400px) {
+        & {
+            display: none;
+        }
+    }
 }
 
 .searchInput {

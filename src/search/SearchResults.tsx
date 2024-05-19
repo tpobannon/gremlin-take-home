@@ -2,18 +2,20 @@ import { useContext } from "react"
 import { SearchContext } from "./SearchContext"
 import { useNpmSearch } from "./useNpmSearch"
 import { SearchResultListItem } from "./SearchResultListItem"
+import { ErrorMessage } from "../common/ErrorMessage"
+
 
 export const SearchResults = () => {
-    const { queryString: searchText } = useContext(SearchContext)
+    const { queryString: searchText, forceSearchError } = useContext(SearchContext)
 
-    const { error, isLoading, data } = useNpmSearch(searchText);
+    const { error, isLoading, data } = useNpmSearch(searchText, forceSearchError);
 
     if (isLoading) {
         return <div>Loading...</div>
     }
 
     if (error) {
-        return <div>{error}</div>
+        return <ErrorMessage>{error}</ErrorMessage>
     }
 
     return <div>

@@ -6,6 +6,7 @@ type SearchContextData = {
     setQueryString: (queryString?: string) => void;
     searchResultData?: NpmPackageSearchResult[];
     setSearchResultData: (searchResultData: NpmPackageSearchResult[]) => void;
+    forceSearchError: boolean;
 }
 
 const defaultContext: SearchContextData = {
@@ -13,6 +14,7 @@ const defaultContext: SearchContextData = {
     setQueryString: () => {},
     searchResultData: [],
     setSearchResultData: () => {},
+    forceSearchError: false
 }
 
 export const SearchContext = createContext<SearchContextData>(defaultContext);
