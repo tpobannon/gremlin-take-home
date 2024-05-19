@@ -1,19 +1,30 @@
-import { useRef, useContext, FormEvent } from "react";
+import { useState, useContext, FormEvent, ChangeEvent } from "react";
 import { SearchContext } from "./SearchContext";
+import styles from "./SearchBar.module.scss";
+import npmLogo from "../assets/npm-logo.svg"
+import magGlass from "../assets/mag-glass.svg"
 
 export const SearchBar = () => {
-    const {setSearchText} = useContext(SearchContext);
-    const inputRef = useRef<HTMLInputElement>(null);
+    const [searchText, setSearchText] = useState<string>("")
+    const {setQueryString} = useContext(SearchContext);
 
     const search = (e: FormEvent) => {
         e.preventDefault();
-        setSearchText(inputRef.current?.value);
+        setQueryString(searchText)
+    }
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setSearchText(e.currentTarget.value)
     }
 
     return (
-        <form onSubmit={search}>
-            <input name="searchText" ref={inputRef}/>
-            <button type="submit">Search</button>
+        <form onSubmit={search} className={styles.searchBar}>
+            <img src={npmLogo} className={styles.npmLogo}/>
+            <span className={styles.searchField}>
+                <img src={magGlass} className={styles.magGlass}/>
+                <input type="search" name="searchText" onChange={handleChange} className={styles.searchInput} placeholder="Search packages"/>
+            </span>
+            <button type="submit" className={styles.searchButton}>Search</button>
         </form>
     )
 }

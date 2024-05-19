@@ -4,7 +4,7 @@ import { useNpmSearch } from "./useNpmSearch"
 import { SearchResultListItem } from "./SearchResultListItem"
 
 export const SearchResults = () => {
-    const { searchText } = useContext(SearchContext)
+    const { queryString: searchText } = useContext(SearchContext)
 
     const { error, isLoading, data } = useNpmSearch(searchText);
 

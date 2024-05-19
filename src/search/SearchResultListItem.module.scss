@@ -1,0 +1,54 @@
+.listItem {
+    padding: 10px 0 10px 0;
+    &:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.packageLink {
+    color: #000000;
+
+    &:hover {
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+
+.details {
+    display: flex;
+}
+
+.tagList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.tag {
+    display: inline;
+    background-color: #eeeeee;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.publishingInfo {
+    display: flex;
+    gap: 10px;
+}
+
+.publisher {
+    font-weight: bold;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+}
+
+.detailInfo {
+    flex: 1;
+}
+
+.detailGraphs {
+    width: 20%;
+}

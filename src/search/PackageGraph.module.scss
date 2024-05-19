@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    font-size: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.label {
+    text-align: right;
+    width: 50px;
+}
+
+.graphBar {
+    flex: 1;
+    height: 5px;
+    font-size: 1px;
+}
+
+.quality {
+    background-color: #8956ff
+}
+
+.popularity {
+    background-color: #29abe2;
+}
+
+.maintenance {
+    background-color: #cb3837
+}

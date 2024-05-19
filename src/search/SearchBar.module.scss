@@ -1,0 +1,42 @@
+$search-background-color: rgb(242,242,242);
+
+.searchBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.npmLogo {
+    height: 20px;
+    margin-right: 20px;
+}
+
+.searchField {
+    display: flex;
+    background-color: $search-background-color;
+    flex: 1;
+}
+
+.magGlass {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.searchInput {
+    border: none;
+    background-color: $search-background-color;
+    height: 40px;
+    margin-right: 5px;
+    flex: 1;
+
+    &:focus, &:focus-visible {
+        outline: none;
+        border: none;
+    }
+}
+
+.searchButton {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 0;
+}
